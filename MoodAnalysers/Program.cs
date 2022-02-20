@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using MoodAnalysers;
+
+Console.WriteLine("Hello, Welcome to mood Analyser!");
+Console.WriteLine("Enter your Mood...");
+string moods = Console.ReadLine();
+MoodAnalysis mood = new MoodAnalysis();
+
