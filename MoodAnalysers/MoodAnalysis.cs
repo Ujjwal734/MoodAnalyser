@@ -9,6 +9,11 @@ namespace MoodAnalysers
     public class MoodAnalysis
     {
         public string message;
+        public MoodAnalysis(string message)
+        {
+            this.message = message;
+            Console.WriteLine(message);
+        }
 
         public string Moodss()
         {
