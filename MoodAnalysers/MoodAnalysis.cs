@@ -15,7 +15,7 @@ namespace MoodAnalysers
             Console.WriteLine(message);
         }
 
-        public string Moodss()
+       /* public string  Moodss()
         {
             if(message.Contains("Happy"))
             {
@@ -29,6 +29,29 @@ namespace MoodAnalysers
             {
                 return "Enter your current Mood";
             }
+        }*/
+        public string AnalyseMood()
+        {
+            try
+            {
+                if (message==null)
+                {
+                    throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.NULL_MESSAGE, "Mood should not be null");
+                }
+                if (this.message.Equals(string.Empty))
+                {
+                    throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.EMPTY_MESSAGE, "Mood should not be empty");
+                }
+                if (this.message.Contains("sad"))
+                    return "SAD";
+                else
+                    return "HAPPY";
+            }
+            catch (MoodAnalysisException obj)
+            {
+                return obj.Message;
+            }
+           // return null;
         }
     }
 }
