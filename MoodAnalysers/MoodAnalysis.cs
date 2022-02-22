@@ -15,7 +15,7 @@ namespace MoodAnalysers
             Console.WriteLine(message);
         }
 
-       /* public string  Moodss()
+        public string  Moodss()
         {
             if(message.Contains("Happy"))
             {
@@ -29,7 +29,7 @@ namespace MoodAnalysers
             {
                 return "Enter your current Mood";
             }
-        }*/
+        }
         public string AnalyseMood()
         {
             try
